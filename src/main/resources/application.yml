@@ -1,8 +1,8 @@
 
 logging.level.: ${LOGGING_LEVEL_:INFO}
 logging:
-  file: ${LOGGING_FILE:yrd-turbine}.log
-  path: ${LOGGING_PATH:${user.home}/data/yrd-turbine/logs}
+  file: ${LOGGING_FILE:oss-turbine}.log
+  path: ${LOGGING_PATH:${user.home}/data/oss-turbine/logs}
   level:
     root: ${LOGGING_LEVEL_:INFO}
     jndi: ${LOGGING_LEVEL_:INFO}
