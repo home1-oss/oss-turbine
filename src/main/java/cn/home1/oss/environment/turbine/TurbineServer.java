@@ -1,4 +1,4 @@
-package com.yirendai.oss.environment.turbine;
+package cn.home1.oss.environment.turbine;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

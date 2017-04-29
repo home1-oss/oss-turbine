@@ -5,34 +5,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.yirendai.infra</groupId>
+        <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>
-        <version>1.0.8.OSS-SNAPSHOT</version>
+        <version>1.0.9.OSS</version>
     </parent>
 
     <artifactId>oss-turbine</artifactId>
+    <description>Turbine</description>
     <name>oss-turbine</name>
     <packaging>jar</packaging>
-    <version>1.0.6.OSS-SNAPSHOT</version>
     <url>https://github.com/home1-oss/oss-turbine</url>
+    <version>1.0.6.OSS-SNAPSHOT</version>
 
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/home1-oss/oss-turbine</url>
+    </ciManagement>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/home1-oss/oss-turbine/issues</url>
+    </issueManagement>
     <scm>
         <connection>scm:git:https://github.com/home1-oss/oss-turbine.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/home1-oss/oss-turbine.git</developerConnection>
         <url>https://github.com/home1-oss/oss-turbine</url>
     </scm>
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/home1-oss/oss-turbine/issues</url>
-    </issueManagement>
-    <ciManagement>
-        <system>Travis CI</system>
-        <url>https://travis-ci.org/home1-oss/oss-turbine</url>
-    </ciManagement>
 
     <properties>
         <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
-        <oss-release.version>1.0.6.OSS-SNAPSHOT</oss-release.version>
+        <oss-release.version>1.0.6.OSS</oss-release.version>
     </properties>
 
     <build>
@@ -43,7 +44,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <classifier>exec</classifier>
-                    <mainClass>com.yirendai.oss.environment.turbine.TurbineServer</mainClass>
+                    <mainClass>cn.home1.oss.environment.turbine.TurbineServer</mainClass>
                     <layout>ZIP</layout>
                     <excludes>
                         <exclude>
@@ -85,7 +86,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.yirendai.infra</groupId>
+                <groupId>cn.home1</groupId>
                 <artifactId>oss-release-spring-boot-${spring-boot.version}</artifactId>
                 <version>${oss-release.version}</version>
                 <type>pom</type>
