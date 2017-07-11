@@ -33,7 +33,7 @@ turbine
     eureka:
       client:
         serviceUrl:
-          defaultZone: http://local-eureka:8761/eureka/
+          defaultZone: http://eureka.local:8761/eureka/
     
     security:
       basic:
@@ -61,4 +61,4 @@ turbine
     }
 
 ## 4. 配置完成
-After running, use this url in the hystrix dashboard: http://local-turbine:8989/turbine.stream
+After running, use this url in the hystrix dashboard: http://turbine.local:8989/turbine.stream
